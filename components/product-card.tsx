@@ -51,6 +51,15 @@ export function ProductCard({ product }: ProductCardProps) {
           </Button>
         </div>
         <div className="relative h-48 w-full bg-gray-100 dark:bg-gray-800">
+          {/* 
+            HOW TO ADD PRODUCT PHOTOS:
+            1. Add your product images to the public folder (e.g., public/images/products/)
+            2. Update the product.image path in your products data (lib/products.ts)
+            3. Example path: "/images/products/smartphone-1.jpg"
+            4. Recommended image size: 500x500px or similar aspect ratio
+            5. The Image component will automatically handle responsiveness
+            6. If no image is provided, it will fall back to the placeholder
+          */}
           <Image
             src={product.image || "/placeholder.svg?height=192&width=256"}
             alt={product.name}
